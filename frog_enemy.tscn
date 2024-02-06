@@ -90,8 +90,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_i7rbp"]
-size = Vector2(16, 22)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rjb2a"]
+radius = 9.0
+height = 26.0
 
 [node name="FrogEnemy" type="CharacterBody2D"]
 position = Vector2(1, 0)
@@ -107,7 +108,7 @@ script = ExtResource("3_idvr4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 0)
-shape = SubResource("RectangleShape2D_i7rbp")
+shape = SubResource("CapsuleShape2D_rjb2a")
 
 [node name="State machine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("3_pd8yq")

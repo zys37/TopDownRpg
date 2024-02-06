@@ -1,1 +1,15 @@
+res://default_env.tres
+res://World.tscn
 res://addons/dialogue_manager/example_balloon/example_balloon.gd
+res://World/Bush.tscn
+res://player/Player.tscn
+res://menu.tscn
+res://muzykadomenu.tscn
+res://npc.tscn
+res://npc_2.tscn
+res://addons/dialogue_manager/example_balloon/small_example_balloon.tscn
+res://frog_enemy.tscn
+res://muzalas.tscn
+res://States/EnemyAttack.gd
+res://States/EnemyFollow.gd
+res://FrogEnemy.gd

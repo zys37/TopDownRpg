@@ -12,5 +12,7 @@ func Enter():
 		
 func Physics_Update(delta: float):
 	var direction = player.global_position - enemy.global_position
+	if !attacking && enemy.get_animation_player().is_playing("Attack") == false:
+		Transitioned.emit(self,"EnemyFollow")
 	if direction.length() > 60:
 		Transitioned.emit(self,"Idle")
