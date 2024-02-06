@@ -1,0 +1,92 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_cb832"]
+
+[resource]
+script = ExtResource("1_cb832")
+titles = {
+"start": "2"
+}
+character_names = PackedStringArray("dorf")
+first_title = "2"
+lines = {
+"1": {
+"id": "1",
+"next_id": "2",
+"text": "start",
+"type": "title"
+},
+"2": {
+"character": "dorf",
+"character_replacements": Array[Dictionary]([]),
+"id": "2",
+"next_id": "3",
+"tags": PackedStringArray(),
+"text": "[[wizard good|long time no wizard|other dorf smel|helo old man]]...wat you want?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[wizard good|long time no wizard|other dorf smel|helo old man]]...wat you want?",
+"type": "dialogue"
+},
+"3": {
+"id": "3",
+"next_id": "4",
+"next_id_after": "9",
+"responses": PackedStringArray("3", "5", "7"),
+"tags": PackedStringArray(),
+"text": "Who are you?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Who are you?",
+"type": "response"
+},
+"4": {
+"character": "dorf",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "9",
+"parent_id": "3",
+"tags": PackedStringArray(),
+"text": "I dorf. [[me live here and like forest|Wizard wise. Wizard know.|Me finish higherst school of mexico.]]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I dorf. [[me live here and like forest|Wizard wise. Wizard know.|Me finish higherst school of mexico.]]",
+"type": "dialogue"
+},
+"5": {
+"id": "5",
+"next_id": "6",
+"next_id_after": "9",
+"tags": PackedStringArray(),
+"text": "How did you end up here?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "How did you end up here?",
+"type": "response"
+},
+"6": {
+"character": "dorf",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "9",
+"parent_id": "5",
+"tags": PackedStringArray(),
+"text": "I be in this village since I am here. Me and I brothers chosen tis place escaping a beast.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I be in this village since I am here. Me and I brothers chosen tis place escaping a beast.",
+"type": "dialogue"
+},
+"7": {
+"id": "7",
+"next_id": "end",
+"next_id_after": "9",
+"tags": PackedStringArray(),
+"text": "Goodbye.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Goodbye.",
+"type": "response"
+},
+"9": {
+"id": "9",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+}
+}
+metadata/dialogue_manager_version = "2.27.0"

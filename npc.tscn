@@ -1,0 +1,74 @@
+[gd_scene load_steps=10 format=3 uid="uid://5rnde3pej0ap"]
+
+[ext_resource type="Script" path="res://npc.gd" id="1_w2vld"]
+[ext_resource type="Texture2D" uid="uid://bjdwi1d4ge63b" path="res://bieg biedaka.png" id="2_2t5mo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vn0hn"]
+atlas = ExtResource("2_2t5mo")
+region = Rect2(0, 0, 13, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wue57"]
+atlas = ExtResource("2_2t5mo")
+region = Rect2(13, 0, 13, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgla7"]
+atlas = ExtResource("2_2t5mo")
+region = Rect2(26, 0, 13, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tq7c4"]
+atlas = ExtResource("2_2t5mo")
+region = Rect2(39, 0, 13, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icwxq"]
+atlas = ExtResource("2_2t5mo")
+region = Rect2(0, 0, 13, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x433p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vn0hn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wue57")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgla7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tq7c4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_icwxq")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_41bqy"]
+radius = 7.0
+
+[node name="npc" type="CharacterBody2D"]
+position = Vector2(320, 138)
+script = ExtResource("1_w2vld")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -5)
+scale = Vector2(1.03846, 1.02941)
+sprite_frames = SubResource("SpriteFrames_x433p")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -2)
+shape = SubResource("CircleShape2D_41bqy")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,129 @@
+[gd_scene load_steps=20 format=3 uid="uid://m2631lkdsi2s"]
+
+[ext_resource type="Script" path="res://FrogEnemy.gd" id="1_uchvm"]
+[ext_resource type="Texture2D" uid="uid://c68wxbpj86742" path="res://nowazaba.png" id="2_idtwb"]
+[ext_resource type="Script" path="res://AnimatedFrog.gd" id="3_idvr4"]
+[ext_resource type="Script" path="res://State machine.gd" id="3_pd8yq"]
+[ext_resource type="Script" path="res://States/EnemyIdle.gd" id="4_e8oij"]
+[ext_resource type="Script" path="res://States/EnemyFollow.gd" id="5_mw7wx"]
+[ext_resource type="Script" path="res://States/EnemyAttack.gd" id="7_8lc46"]
+[ext_resource type="Script" path="res://Node2D.gd" id="8_3llbk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_niaam"]
+atlas = ExtResource("2_idtwb")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3exej"]
+atlas = ExtResource("2_idtwb")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dpk8m"]
+atlas = ExtResource("2_idtwb")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_362dm"]
+atlas = ExtResource("2_idtwb")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s35yw"]
+atlas = ExtResource("2_idtwb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjle1"]
+atlas = ExtResource("2_idtwb")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6y5g7"]
+atlas = ExtResource("2_idtwb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a62ju"]
+atlas = ExtResource("2_idtwb")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61lq0"]
+atlas = ExtResource("2_idtwb")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ukdil"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_niaam")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3exej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dpk8m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_362dm")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s35yw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mjle1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6y5g7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a62ju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_61lq0")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i7rbp"]
+size = Vector2(16, 22)
+
+[node name="FrogEnemy" type="CharacterBody2D"]
+position = Vector2(1, 0)
+script = ExtResource("1_uchvm")
+
+[node name="AnimatedFrog" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.999998, 0)
+scale = Vector2(1.14063, 1.1875)
+sprite_frames = SubResource("SpriteFrames_ukdil")
+animation = &"Attack"
+frame_progress = 0.303162
+script = ExtResource("3_idvr4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_i7rbp")
+
+[node name="State machine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("3_pd8yq")
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="State machine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("4_e8oij")
+enemy = NodePath("../..")
+
+[node name="Follow" type="Node" parent="State machine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("5_mw7wx")
+enemy = NodePath("../..")
+
+[node name="EnemyAttack" type="Node" parent="State machine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("7_8lc46")
+enemy = NodePath("../..")
+
+[node name="HP" type="Node2D" parent="."]
+script = ExtResource("8_3llbk")

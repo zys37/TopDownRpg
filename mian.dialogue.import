@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_10"
+type="Resource"
+uid="uid://b8lnpnnuhh4di"
+path="res://.godot/imported/mian.dialogue-d7505a2b98bdd3d346c6ffaec59f4f03.tres"
+
+[deps]
+
+source_file="res://mian.dialogue"
+dest_files=["res://.godot/imported/mian.dialogue-d7505a2b98bdd3d346c6ffaec59f4f03.tres"]
+
+[params]
+
+defaults=true

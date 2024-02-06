@@ -1,0 +1,9 @@
+~ start
+dorf: [[wizard good|long time no wizard|other dorf smel|helo old man]]...wat you want?
+- Who are you?
+	dorf: I dorf. [[me live here and like forest|Wizard wise. Wizard know.|Me finish higherst school of mexico.]]
+- How did you end up here?
+	dorf: I be in this village since I am here. Me and I brothers chosen tis place escaping a beast.
+- Goodbye. => END
+
+=> END
