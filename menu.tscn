@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dxrs8jrkp86l3"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_2tnux"]
-[ext_resource type="AudioStream" uid="uid://b7b6t0dc55jnk" path="res://Papugołak.mp3" id="2_hvrnm"]
+[ext_resource type="AudioStream" uid="uid://cnxrl8vj5bmfo" path="res://tytyry(1).mp3" id="2_gkhbx"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -38,7 +38,7 @@ layout_mode = 2
 text = "Quit"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_hvrnm")
+stream = ExtResource("2_gkhbx")
 volume_db = -20.0
 autoplay = true
 

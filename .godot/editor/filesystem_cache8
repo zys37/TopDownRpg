@@ -1,40 +1,41 @@
 1b68385e458f39b50782b41f7e95c77f
-::res://::1707195954
+::res://::1709864149
 AnimatedFrog.gd::GDScript::-1::1700165160::0::1::::<>AnimatedSprite2D<>::
 Area2D.gd::GDScript::-1::1699842525::0::1::::<>Area2D<>::
 bieg biedaka.png::CompressedTexture2D::3025664841457029525::1697760347::1697760348::1::::<><>::
 bieg rudego.png::CompressedTexture2D::2852679880706685661::1697760332::1697760335::1::::<><>::
 bieg wiesniaka.png::CompressedTexture2D::1691373871860412238::1697760323::1697760324::1::::<><>::
 Camera2D.gd::GDScript::-1::1697631489::0::1::::<>Camera2D<>::
-default_env.tres::Environment::1811964327145140126::1705373714::0::1::::<><>::
+default_env.tres::Environment::1811964327145140126::1709863812::0::1::::<><>::
 do gry rozwinieta.png::CompressedTexture2D::4591994766606209663::1697754765::1697754836::1::::<><>::
 drugi spritesheet gra.png::CompressedTexture2D::4835628031105712549::1700613760::1700613760::1::::<><>::
-FrogEnemy.gd::GDScript::-1::1700606175::0::1::::FrogEnemy<>CharacterBody2D<>::
-frog_enemy.tscn::PackedScene::899937935080133256::1705373714::0::1::::<><>::res://FrogEnemy.gd<>uid://c68wxbpj86742
+FrogEnemy.gd::GDScript::-1::1709863808::0::1::::FrogEnemy<>CharacterBody2D<>::
+frog_enemy.tscn::PackedScene::899937935080133256::1709863812::0::1::::<><>::res://FrogEnemy.gd<>uid://c68wxbpj86742::::res://nowazaba.png<>res://AnimatedFrog.gd<>res://State machine.gd<>res://States/EnemyIdle.gd<>res://States/EnemyFollow.gd<>res://States/EnemyAttack.gd<>res://Node2D.gd
 global.gd::GDScript::-1::1698011416::0::1::::<>Node<>::
 icon.png::CompressedTexture2D::2332214422460795248::1697631490::1697631490::1::::<><>::
 las.wav::AudioStreamWAV::5835152084713678223::1699838376::1699838434::1::::<><>::
 menu.gd::GDScript::-1::1698169859::0::1::::<>Control<>::
-menu.tscn::PackedScene::8809852213089281030::1705373714::0::1::::<><>::res://menu.gd<>uid://b7b6t0dc55jnk
+menu.tscn::PackedScene::8809852213089281030::1709863811::0::1::::<><>::res://menu.gd<>uid://b7b6t0dc55jnk::::res://Papugołak.mp3
 mian.dialogue::Resource::4726177490661745610::1698020923::1698020923::1::::<><>::
 musicplayer.gd::GDScript::-1::1699838518::0::1::::<>AudioStreamPlayer2D<>::
 muzalas.gd::GDScript::-1::1699842319::0::1::::<>AudioStreamPlayer2D<>::
-muzalas.tscn::PackedScene::5009122297742289778::1705373714::0::1::::<><>::uid://cpeudqje81cg2
-muzykadomenu.tscn::PackedScene::2593093888565384280::1705373714::0::1::::<><>::uid://b7b6t0dc55jnk
+muzalas.tscn::PackedScene::5009122297742289778::1709863812::0::1::::<><>::uid://cpeudqje81cg2::::res://las.wav<>res://muzalas.gd
+muzykadomenu.tscn::PackedScene::2593093888565384280::1709863811::0::1::::<><>::uid://b7b6t0dc55jnk::::res://Papugołak.mp3
 Node2D.gd::GDScript::-1::1705287056::0::1::::<>Node2D<>::
 nowazaba.png::CompressedTexture2D::7018196909299544157::1700595189::1700595190::1::::<><>::
 npc.gd::GDScript::-1::1698013605::0::1::::<>CharacterBody2D<>::
-npc.tscn::PackedScene::2141554663282850011::1705373714::0::1::::<><>::res://npc.gd<>uid://bjdwi1d4ge63b
+npc.tscn::PackedScene::2141554663282850011::1709863811::0::1::::<><>::res://npc.gd<>uid://bjdwi1d4ge63b::::res://bieg biedaka.png
 npc_2.gd::GDScript::-1::1698164575::0::1::::<>CharacterBody2D<>::
-npc_2.tscn::PackedScene::9069642843560694140::1705373714::0::1::::<><>::res://npc_2.gd<>uid://ydkxeyupngoc
+npc_2.tscn::PackedScene::9069642843560694140::1709863811::0::1::::<><>::res://npc_2.gd<>uid://ydkxeyupngoc::::res://bieg wiesniaka.png
 Papugołak.mp3::AudioStreamMP3::4636445532574468280::1697631490::1697631490::1::::<><>::
-Player.gd::GDScript::-1::1702040267::0::1::::<>CharacterBody2D<>::
+Player.gd::GDScript::-1::1709863808::0::1::::<>CharacterBody2D<>::
 spritesheet do gry.png::CompressedTexture2D::1543570384493587546::1702164558::1702164559::1::::<><>::
 start button.png::CompressedTexture2D::6728434450025550769::1697631490::1697631490::1::::<><>::
 State machine.gd::GDScript::-1::1698192932::0::1::::<>Node<>::
 state.gd::GDScript::-1::1700159123::0::1::::State<>Node<>::
+tytyry(1).mp3::AudioStreamMP3::5733830621794491440::1709864099::1709864151::1::::<><>::
 walkazbossemmaciej.mp3::AudioStreamMP3::52568525536940602::1697631490::1697631490::1::::<><>::
-World.tscn::PackedScene::631728171302554452::1705373713::0::1::::<><>::uid://drm834ugups5k
+World.tscn::PackedScene::631728171302554452::1709863810::0::1::::<><>::uid://drm834ugups5k::::res://player/Player.tscn<>uid://ca5oc71pnd58d::::res://drugi spritesheet gra.png<>uid://v8ym418mfjbm::::res://spritesheet do gry.png<>uid://cg7iemwl26xni::::res://World/Solaria Demo Update 01.png<>res://Camera2D.gd<>uid://b6onqoigiex7d::::res://do gry rozwinieta.png<>uid://5rnde3pej0ap::::res://npc.tscn<>uid://d2hnxstw4khyq::::res://npc_2.tscn<>uid://m2631lkdsi2s::::res://frog_enemy.tscn<>res://Area2D.gd<>uid://cdmprolpdcujq::::res://muzalas.tscn
 zabol chodzi w prawoi.png::CompressedTexture2D::6801414740826355574::1698164747::1698164771::1::::<><>::
 zoltydach.png::CompressedTexture2D::6830912754853044094::1697631490::1697631490::1::::<><>::
 ::res://addons/::1698014515
@@ -79,10 +80,10 @@ title_list.gd::GDScript::-1::1698014515::0::1::::<>VBoxContainer<>::
 title_list.tscn::PackedScene::6134415340044566558::1698014515::0::1::::<><>::res://addons/dialogue_manager/components/title_list.gd
 update_button.gd::GDScript::-1::1698014515::0::1::::<>Button<>::
 update_button.tscn::PackedScene::5825087957514786930::1698014515::0::1::::<><>::res://addons/dialogue_manager/components/update_button.gd<>uid://qdxrxv3c3hxk
-::res://addons/dialogue_manager/example_balloon/::1705719869
-example_balloon.gd::GDScript::-1::1705719869::0::1::::<>CanvasLayer<>::
+::res://addons/dialogue_manager/example_balloon/::1709863812
+example_balloon.gd::GDScript::-1::1709863808::0::1::::<>CanvasLayer<>::
 example_balloon.tscn::PackedScene::2304415056852043862::1698014515::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo
-small_example_balloon.tscn::PackedScene::1883859960814163368::1705373714::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo
+small_example_balloon.tscn::PackedScene::1883859960814163368::1709863812::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>res://addons/dialogue_manager/dialogue_reponses_menu.gd
 ::res://addons/dialogue_manager/l10n/::1698014515
 en.mo::Translation::-1::1698014515::0::1::::<><>::
 en.po::Translation::-1::1698014515::0::1::::<><>::
@@ -97,18 +98,18 @@ settings_view.tscn::PackedScene::5839841081119266502::1698014515::0::1::::<><>::
 balloon.gd::GDScript::-1::1698016701::0::1::::<>CanvasLayer<>::
 balloon.tscn::PackedScene::2304415056852043862::1698016701::0::1::::<><>::res://dialog/balloon.gd<>uid://ckvgyvclnwggo
 small_balloon.tscn::PackedScene::1883859960814163368::1698018867::0::1::::<><>::res://dialog/balloon.gd<>uid://ckvgyvclnwggo
-::res://player/::1705373713
+::res://player/::1709863811
 Control.gd::GDScript::-1::1697631490::0::1::::<>Control<>::
 HealthPoints.gd::GDScript::-1::1705287055::0::1::::<>Node2D<>::
-Player.tscn::PackedScene::8379300143338394566::1705373713::0::1::::<><>::res://Player.gd<>uid://cm1r1ygsn60sg
+Player.tscn::PackedScene::8379300143338394566::1709863811::0::1::::<><>::res://Player.gd<>uid://cm1r1ygsn60sg::::res://player/wizard char.png<>res://player/HealthPoints.gd
 wizard char.png::CompressedTexture2D::5669861202832389974::1697631490::1697631490::1::::<><>::
-::res://States/::1700604172
-EnemyAttack.gd::GDScript::-1::1700603357::0::1::::EnemyAttack<>State<>::
-EnemyFollow.gd::GDScript::-1::1700604172::0::1::::EnemyFollow<>State<>::
+::res://States/::1707196710
+EnemyAttack.gd::GDScript::-1::1707196280::0::1::::EnemyAttack<>State<>::
+EnemyFollow.gd::GDScript::-1::1707196710::0::1::::EnemyFollow<>State<>::
 EnemyIdle.gd::GDScript::-1::1700602583::0::1::::EnemyIdle<>State<>::
-::res://World/::1705373713
+::res://World/::1709863811
 bush.png::CompressedTexture2D::5694256846352507388::1697631490::1697631490::1::::<><>::
-Bush.tscn::PackedScene::8192261802922746446::1705373713::0::1::::<><>::uid://cneltwshjtonc
+Bush.tscn::PackedScene::8192261802922746446::1709863811::0::1::::<><>::uid://cneltwshjtonc::::res://World/bush.png
 czerwonydach.png::CompressedTexture2D::5276359499289215163::1697631490::1697631490::1::::<><>::
 do gry rozwinieta.png::CompressedTexture2D::1762795272770655946::1697631490::1697631490::1::::<><>::
 drzewo.png::CompressedTexture2D::7863732145660595763::1697631490::1697631490::1::::<><>::

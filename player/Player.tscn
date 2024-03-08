@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://drm834ugups5k"]
+[gd_scene load_steps=41 format=3 uid="uid://drm834ugups5k"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://cm1r1ygsn60sg" path="res://player/wizard char.png" id="2"]
@@ -395,6 +395,9 @@ transitions = ["Idle", "Run", SubResource("21"), "Run", "Idle", SubResource("22"
 [sub_resource type="CircleShape2D" id="CircleShape2D_xbxms"]
 radius = 21.095
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_5s555"]
+radius = 18.1108
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 y_sort_enabled = true
 position = Vector2(0, 1)
@@ -437,5 +440,17 @@ shape = SubResource("CircleShape2D_xbxms")
 [node name="HealthPoints" type="Node2D" parent="."]
 script = ExtResource("3_nsw3s")
 
+[node name="player_hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_hitbox"]
+position = Vector2(-1, -7)
+shape = SubResource("CircleShape2D_5s555")
+
+[node name="attack_cooldown" type="Timer" parent="."]
+wait_time = 0.5
+
 [connection signal="body_entered" from="detection" to="." method="_on_detection_body_entered"]
 [connection signal="body_exited" from="detection" to="." method="_on_detection_body_exited"]
+[connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
+[connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]
+[connection signal="timeout" from="attack_cooldown" to="." method="_on_attack_cooldown_timeout"]

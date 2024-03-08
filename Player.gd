@@ -8,7 +8,10 @@ enum {
 	ROLL,
 	ATTACK
 }
-
+var enemy_inattack_range = false
+var enemy_attack_cooldown =  true
+var player_alive = true
+var health = 100
 var state = MOVE
 @onready var animationPlayer = $AnimationPlayer
 @onready var animationTree = $AnimationTree
@@ -44,6 +47,11 @@ func attack_animation_finished():
 	
 	
 func _physics_process(delta):
+	enemy_attack()
+	if health <= 0:
+		player_alive = false #dodaj cos z ginieciem
+		health = 0
+		get_tree().change_scene_to_file("res://deathscreen.tscn")
 	match state:
 		MOVE:
 			move_state(delta)
@@ -69,3 +77,23 @@ func _on_detection_body_exited(body):
 	
 		
 
+func _on_player_hitbox_body_entered(body):
+	if body.has_method("enemy"):
+		enemy_inattack_range = true
+
+
+func _on_player_hitbox_body_exited(body):
+	if body.has_method("enemy"):
+		enemy_inattack_range = false
+func enemy_attack():
+	if enemy_inattack_range and enemy_attack_cooldown:
+		health-=10
+		enemy_attack_cooldown = false
+		$attack_cooldown.start()
+		print(health)
+	pass
+func player():
+	pass
+
+func _on_attack_cooldown_timeout():
+	enemy_attack_cooldown = true

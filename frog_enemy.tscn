@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://m2631lkdsi2s"]
+[gd_scene load_steps=21 format=3 uid="uid://m2631lkdsi2s"]
 
 [ext_resource type="Script" path="res://FrogEnemy.gd" id="1_uchvm"]
 [ext_resource type="Texture2D" uid="uid://c68wxbpj86742" path="res://nowazaba.png" id="2_idtwb"]
@@ -94,6 +94,9 @@ animations = [{
 radius = 9.0
 height = 26.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_vc50q"]
+radius = 16.0
+
 [node name="FrogEnemy" type="CharacterBody2D"]
 position = Vector2(1, 0)
 script = ExtResource("1_uchvm")
@@ -128,3 +131,9 @@ enemy = NodePath("../..")
 
 [node name="HP" type="Node2D" parent="."]
 script = ExtResource("8_3llbk")
+
+[node name="enemy_hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hitbox"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_vc50q")

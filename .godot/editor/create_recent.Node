@@ -1,9 +1,13 @@
+Button
+Label
+AudioStreamPlayer2D
+RichTextLabel
+Timer
+CollisionShape2D
+Area2D
 Node2D
 EnemyAttack
 State
-AudioStreamPlayer2D
-CollisionShape2D
-Area2D
 EnemyFollow
 EnemyIdle
 Node
@@ -11,10 +15,8 @@ AnimatedSprite2D
 CharacterBody2D
 Control
 CanvasLayer
-Timer
 AudioStreamPlayer
 TextureButton
-Button
 VBoxContainer
 Camera2D
 TileMap
