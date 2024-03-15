@@ -2202,7 +2202,7 @@ layer_2/tile_data = PackedInt32Array(2097161, 983043, 6, 1900555, 983043, 6, 131
 
 [node name="Player" parent="." instance=ExtResource("1")]
 texture_filter = 1
-position = Vector2(356, 688)
+position = Vector2(396, 780)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(14, -22)

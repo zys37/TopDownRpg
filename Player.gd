@@ -10,12 +10,14 @@ enum {
 }
 var enemy_inattack_range = false
 var enemy_attack_cooldown =  true
+var HealthRegen_cooldown = true
 var player_alive = true
 var health = 100
 var state = MOVE
 @onready var animationPlayer = $AnimationPlayer
 @onready var animationTree = $AnimationTree
 @onready var animationState = animationTree.get("parameters/playback")
+@onready var health_bar = $HealthBar/ProgressBar
 func _ready():
 	animationTree.active = true
 
@@ -52,6 +54,9 @@ func _physics_process(delta):
 		player_alive = false #dodaj cos z ginieciem
 		health = 0
 		get_tree().change_scene_to_file("res://deathscreen.tscn")
+	if health<100 and HealthRegen_cooldown:
+			health+=0.01
+			$HealthBar/ProgressBar.value = health
 	match state:
 		MOVE:
 			move_state(delta)
@@ -88,8 +93,11 @@ func _on_player_hitbox_body_exited(body):
 func enemy_attack():
 	if enemy_inattack_range and enemy_attack_cooldown:
 		health-=10
+		$HealthBar/ProgressBar.value = health
 		enemy_attack_cooldown = false
 		$attack_cooldown.start()
+		HealthRegen_cooldown = false
+		$HealthRegen_cooldown.start()
 		print(health)
 	pass
 func player():
@@ -97,3 +105,8 @@ func player():
 
 func _on_attack_cooldown_timeout():
 	enemy_attack_cooldown = true
+
+
+
+func _on_health_regen_cooldown_timeout():
+	HealthRegen_cooldown = true

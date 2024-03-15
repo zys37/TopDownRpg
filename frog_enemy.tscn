@@ -106,11 +106,10 @@ position = Vector2(-0.999998, 0)
 scale = Vector2(1.14063, 1.1875)
 sprite_frames = SubResource("SpriteFrames_ukdil")
 animation = &"Attack"
-frame_progress = 0.303162
 script = ExtResource("3_idvr4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 0)
+position = Vector2(-1, -1)
 shape = SubResource("CapsuleShape2D_rjb2a")
 
 [node name="State machine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
@@ -135,5 +134,5 @@ script = ExtResource("8_3llbk")
 [node name="enemy_hitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hitbox"]
-position = Vector2(-1, 0)
+position = Vector2(-1, -2)
 shape = SubResource("CircleShape2D_vc50q")

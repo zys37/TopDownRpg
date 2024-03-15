@@ -1,8 +1,9 @@
-[gd_scene load_steps=41 format=3 uid="uid://drm834ugups5k"]
+[gd_scene load_steps=42 format=3 uid="uid://drm834ugups5k"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://cm1r1ygsn60sg" path="res://player/wizard char.png" id="2"]
 [ext_resource type="Script" path="res://player/HealthPoints.gd" id="3_nsw3s"]
+[ext_resource type="PackedScene" uid="uid://brwiu8at2y33b" path="res://HealthBar.tscn" id="4_rjdtl"]
 
 [sub_resource type="CapsuleShape2D" id="1"]
 radius = 11.0
@@ -396,7 +397,7 @@ transitions = ["Idle", "Run", SubResource("21"), "Run", "Idle", SubResource("22"
 radius = 21.095
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5s555"]
-radius = 18.1108
+radius = 23.0
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 y_sort_enabled = true
@@ -447,10 +448,20 @@ position = Vector2(-1, -7)
 shape = SubResource("CircleShape2D_5s555")
 
 [node name="attack_cooldown" type="Timer" parent="."]
-wait_time = 0.5
+
+[node name="HealthBar" parent="." instance=ExtResource("4_rjdtl")]
+z_index = 4
+offset_left = -204.0
+offset_top = -175.0
+offset_right = -204.0
+offset_bottom = -175.0
+
+[node name="HealthRegen_cooldown" type="Timer" parent="."]
+wait_time = 10.0
 
 [connection signal="body_entered" from="detection" to="." method="_on_detection_body_entered"]
 [connection signal="body_exited" from="detection" to="." method="_on_detection_body_exited"]
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]
 [connection signal="timeout" from="attack_cooldown" to="." method="_on_attack_cooldown_timeout"]
+[connection signal="timeout" from="HealthRegen_cooldown" to="." method="_on_health_regen_cooldown_timeout"]

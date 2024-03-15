@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://brwiu8at2y33b"]
+
+[sub_resource type="Theme" id="Theme_hxpkp"]
+
+[sub_resource type="FontFile" id="FontFile_u8ld8"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5v6yy"]
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.235294, 0.470588, 0.45098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iuxdl"]
+bg_color = Color(0.341176, 0.690196, 0.384314, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.235294, 0.470588, 0.45098, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 80.0
+offset_right = 223.0
+offset_bottom = 89.0
+theme = SubResource("Theme_hxpkp")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.45098, 0.403922, 0.458824, 1)
+theme_override_fonts/font = SubResource("FontFile_u8ld8")
+theme_override_styles/background = SubResource("StyleBoxFlat_5v6yy")
+theme_override_styles/fill = SubResource("StyleBoxFlat_iuxdl")
+value = 100.0
+show_percentage = false

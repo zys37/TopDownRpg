@@ -3,7 +3,6 @@ class_name FrogEnemy
 const Attack_distance = 35
 var health = 100
 func _physics_process(delta):
-	move_and_slide()
 	if velocity.length() > 0:
 		$AnimatedFrog.play("run")
 	if velocity.x > 0:
