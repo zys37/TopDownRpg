@@ -1,6 +1,6 @@
 res://default_env.tres
+res://frog_enemy.tscn
 res://addons/dialogue_manager/example_balloon/example_balloon.gd
-res://HealthBar.tscn
 res://World.tscn
 res://World/Bush.tscn
 res://player/Player.tscn
@@ -9,11 +9,7 @@ res://muzykadomenu.tscn
 res://npc.tscn
 res://npc_2.tscn
 res://addons/dialogue_manager/example_balloon/small_example_balloon.tscn
-res://frog_enemy.tscn
 res://muzalas.tscn
 res://deathscreen.tscn
-res://Player.gd
+res://HealthBar.tscn
 res://FrogEnemy.gd
-res://States/EnemyFollow.gd
-res://States/EnemyAttack.gd
-res://States/EnemyIdle.gd
